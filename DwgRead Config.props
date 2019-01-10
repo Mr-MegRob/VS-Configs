@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>D:\Third_Party_Toolkit\DwgReader\include;$(IncludePath)</IncludePath>
+	<IncludePath>D:\Third_Party_Toolkit\DwgReader\include\ArxInc;$(IncludePath)</IncludePath>
+        <LibraryPath Condition="'$(Platform)'=='Win32'">D:\Third_Party_Toolkit\DwgReader\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+        <Link Condition="'$(Configuration)'=='Debug'">
+          <AdditionalDependencies>MxArxd.lib;MxArxAd.lib;MxBaseAd.lib;MxDrawd.lib;MxDrawAd.lib;MxFileAd.lib;MxGed.lib;MxGeAd.lib;MxKernelAd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+        <Link Condition="'$(Configuration)'=='Release'">
+          <AdditionalDependencies>MxArx.lib;MxArxA.lib;MxBaseA.lib;MxDraw.lib;MxDrawA.lib;MxFileA.lib;MxGe.lib;MxGeA.lib;MxKernelA.lib;%(AdditionalDependencies)</AdditionalDependencies>
+        </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

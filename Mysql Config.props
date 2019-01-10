@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ImportGroup Label="PropertySheets" />
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup>
+		<IncludePath>$(MYSQL_X86)\include;$(IncludePath)</IncludePath>
+		<LibraryPath Condition="'$(Platform)'=='Win32'">$(MYSQL_X86)\lib;$(LibraryPath)</LibraryPath>
+		<LibraryPath Condition="'$(Platform)'=='x64'">$(MYSQL_X86)\lib;$(LibraryPath)</LibraryPath>
+	</PropertyGroup>
+	<ItemDefinitionGroup>
+		<Link Condition="'$(Configuration)'=='Debug'">
+			<AdditionalDependencies>libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+		<Link Condition="'$(Configuration)'=='Release'">
+			<AdditionalDependencies>libmysql.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+	</ItemDefinitionGroup>
+	<ItemGroup />
+</Project>
