@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <IncludePath>D:\HDF5\include;$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Platform)'=='Win32'">D:\HDF5\lib\vc14\x86;$(LibraryPath)</LibraryPath>
+    <LibraryPath Condition="'$(Platform)'=='x64'">D:\HDF5\lib\vc14\x64;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <Link Condition="'$(Configuration)'=='Debug'">
+      <AdditionalDependencies>hdf5_D.lib;hdf5_cpp_D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Link Condition="'$(Configuration)'=='Release'">
+      <AdditionalDependencies>hdf5.lib;hdf5_cpp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <ClCompile>
+      <PreprocessorDefinitions>H5_BUILT_AS_DYNAMIC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

@@ -1,15 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <ImportGroup Label="PropertySheets" />
-  <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
-  <ItemDefinitionGroup>
-    <ClCompile>
-      <AdditionalIncludeDirectories>D:\Program Files\Sentech\StGigE-Package\StGigE SDK\Includes</AdditionalIncludeDirectories>
+	<ImportGroup Label="PropertySheets" />
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup />
+	<ItemDefinitionGroup>
+	<ClCompile>
+		<AdditionalIncludeDirectories>D:\Program Files\Sentech\StGigE-Package\StGigE SDK\Includes</AdditionalIncludeDirectories>
     </ClCompile>
-    <Link>
-      <AdditionalLibraryDirectories>D:\Program Files\Sentech\StGigE-Package\StGigE SDK\Libraries</AdditionalLibraryDirectories>
-      <AdditionalDependencies>EbInstallerLib.lib;PtUtilsLib.lib;PvBase.lib;PvBuffer.lib;PvDevice.lib;PvGenICam.lib;PvGUIUtils.lib;PvPersistence.lib;PvSerial.lib;PvStream.lib;PvStreamRaw.lib;PvTransmitterRaw.lib;PvVirtualDevice.lib;%(AdditionalDependencies)</AdditionalDependencies>
+	<Link>
+		<AdditionalLibraryDirectories>D:\Program Files\Sentech\StGigE-Package\StGigE SDK\Libraries</AdditionalLibraryDirectories>
+		<Link Condition="'$(Configuration)'=='Win32'">
+			<AdditionalDependencies>EbInstallerLib.lib;PtUtilsLib.lib;PvBase.lib;PvBuffer.lib;PvDevice.lib;PvGenICam.lib;PvGUIUtils.lib;PvPersistence.lib;PvSerial.lib;PvStream.lib;PvStreamRaw.lib;PvTransmitterRaw.lib;PvVirtualDevice.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
+		<Link Condition="'$(Configuration)'=='x64'">
+			<AdditionalDependencies>EbInstallerLib64.lib;PtUtilsLib64.lib;PvBase64.lib;PvBuffer64.lib;PvDevice64.lib;PvGenICam64.lib;PvGUIUtils64.lib;PvPersistence64.lib;PvSerial64.lib;PvStream64.lib;PvStreamRaw64.lib;PvTransmitterRaw64.lib;PvVirtualDevice64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+		</Link>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />
